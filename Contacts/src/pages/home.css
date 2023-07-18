@@ -91,3 +91,16 @@
     background-color: #E4D0D0;
     color: #000;
   }
+  .deleteBtn{
+    background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  }

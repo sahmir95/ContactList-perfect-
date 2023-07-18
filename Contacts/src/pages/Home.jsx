@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import './Home.css'
-import { Link, useNavigate } from 'react-router-dom'
+import './Home.css';
+import { Link, useNavigate } from 'react-router-dom';
+import Button from '../components/Button';
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -47,8 +48,9 @@ const Home = () => {
                 <td>{d.phone}</td>
                 <td>
                   <Link to={`/edit/${d.id}`}>Edit</Link>
-                  <button onClick={e => handleDelete(d.id)}>Delete</button>
-                  <Link to={`/detail/${d.id}`}>Read</Link>
+                  <Button type="button" label="Delete" className="deleteBtn"
+                   onClick={() => handleDelete(d.id)} />
+                  <Link to={`/detail/${d.id}`}>Detail</Link>
                 </td>
               </tr>
             ))}
